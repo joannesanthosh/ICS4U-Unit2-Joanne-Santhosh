@@ -20,7 +20,7 @@
       *
       */
 
-     void main(String[] args) {
+      public static void main(String[] args) {
 	 // Create stacks for different types of items
 	 final Stack<String> foodStack = new Stack<>();
 	 final Stack<String> cityStack = new Stack<>();
