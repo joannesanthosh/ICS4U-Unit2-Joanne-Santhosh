@@ -1,5 +1,5 @@
 /* 
- * This is a program prints out stuff.
+ * This is a program that prints out stuff.
  * @author  Joanne Santhosh
  * @version 1.0
  * @since   2024-02-26
