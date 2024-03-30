@@ -1,45 +1,36 @@
 /*
- * This program is a number guessing game
+ * This program uses getters
  * @author  Joanne Santhosh 
  * @version 1.0 
  * @since   2024-02-26
  */
 
-class MrCoxallStack {
+export class MrCoxallStack {
     private stackAsList: string[]
 
-    constructor() {
+    public constructor() {
       this.stackAsList = []
     }
 
     public get isEmpty() {
-        if (isEmpty <= 0 || theAge >= 200) {
-    
-            throw new Error('The age is invalid')
-    
+      let stackValues = "This list is empty."
+
+      if (this.stackAsList.length > 0) {
+        stackValues = this.stackAsList[0]
+        for (let counter = 1; counter < this.stackAsList.length; counter++) {
+          stackValues = stackValues + ", " + this.stackAsList[counter]
         }
+      }
     
-        this._age = theAge
+      return stackValues
     }
 
-    push(pushedString: string): void {
+    public push(pushedString: string): void {
       // push the value onto the stack
       this.stackAsList.push(pushedString)
     }
 
-    showStack(): string {
-      // return the stack
-      let stackValues: string = ""
-
-      for (const value of this.stackAsList) {
-  stackValues += value + ","
-      }
-      stackValues = stackValues.slice(0, -1) // Remove the trailing comma
-
-      return stackValues
-    }
-
-    pop(): string {
+    public pop(): string {
       // return top of the stack
       let returnValue: string = ""
 
