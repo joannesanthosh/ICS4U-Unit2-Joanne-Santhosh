@@ -12,7 +12,7 @@ export class MrCoxallStack {
       this.stackAsList = []
     }
 
-    public get isEmpty() {
+    public get showStack() {
       let stackValues = "This list is empty."
 
       if (this.stackAsList.length > 0) {
