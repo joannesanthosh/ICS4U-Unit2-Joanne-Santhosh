@@ -5,46 +5,54 @@
  * @since   2024-02-26
  */
 
-export class MrCoxallStack {
-    private stackAsList: string[]
+class MrCoxallStack {
 
-    public constructor() {
-      this.stackAsList = []
-    }
-
-    public get showStack() {
-      let stackValues = "This list is empty."
-
-      if (this.stackAsList.length > 0) {
-        stackValues = this.stackAsList[0]
-        for (let counter = 1; counter < this.stackAsList.length; counter++) {
-          stackValues = stackValues + ", " + this.stackAsList[counter]
-        }
-      }
-    
-      return stackValues
-    }
-
-    public push(pushedString: string): void {
-      // push the value onto the stack
-      this.stackAsList.push(pushedString)
-    }
-
-    public pop(): string {
-      // return top of the stack
-      let returnValue: string = ""
-
-      if (this.stackAsList.length > 0) {
-        const topItem: string = this.stackAsList.pop()!
-        returnValue = topItem
-      } else {
-        returnValue = "The stack is empty!"
-      }
-
-      return returnValue
-    }
-
+  // variables
+  constructor() {
+    self.strstack = []
   }
 
-  // Export the class
-  export default MrCoxallStack;
+  // checks if stack is empty
+  get isEmpty() {
+    return self.strstack.length == 0
+  }
+
+  // returns stack size
+  get size() {
+    return self.strstack.length
+  }
+
+  // show full stack seperated by commas
+  get show() {
+    let values = ""
+    if (self.strstack[0]) {
+      for (let counter = 0; counter < self.strstack.length; counter++) {
+        values = values + self.strstack[counter] + ", "
+      }
+      values = values.substring(0, values.length-2)
+    } else {
+      values = "stack is empty"
+    }
+    return values
+  }
+
+  // push item to end of list
+  push(input) {
+    self.strstack.push(input)
+  }
+
+  // pop item from end of list and return value
+  pop() {
+    let removed = ""
+    if (self.strstack[0]) {
+      removed = self.strstack[self.strstack.length - 1]
+    } else {
+      removed = "nothing to remove"
+    }
+    self.strstack.splice(-1)
+    return removed
+  }
+}
+
+// Export the class
+export default MrCoxallStack
