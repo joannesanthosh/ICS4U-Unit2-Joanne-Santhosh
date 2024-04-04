@@ -1,5 +1,5 @@
 /*
- * This program uses getters
+ * This program outputs stuff
  * @author  Joanne Santhosh 
  * @version 1.0 
  * @since   2024-02-26
