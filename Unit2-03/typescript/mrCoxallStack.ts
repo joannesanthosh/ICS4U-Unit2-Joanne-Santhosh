@@ -6,51 +6,53 @@
  */
 
 class MrCoxallStack {
+  private stackAsList: string[]
 
   // variables
   constructor() {
-    self.strstack = []
+    this.stackAsList = []
   }
 
   // checks if stack is empty
   get isEmpty() {
-    return self.strstack.length == 0
+    return this.stackAsList.length == 0
   }
 
   // returns stack size
   get size() {
-    return self.strstack.length
+      return this.stackAsList.length
   }
 
-  // show full stack seperated by commas
-  get show() {
-    let values = ""
-    if (self.strstack[0]) {
-      for (let counter = 0; counter < self.strstack.length; counter++) {
-        values = values + self.strstack[counter] + ", "
-      }
-      values = values.substring(0, values.length-2)
-    } else {
-      values = "stack is empty"
+  showStack(): string {
+    // return the stack
+    let stackValues: string = ""
+
+    for (const value of this.stackAsList) {
+stackValues += value + ","
     }
-    return values
+    stackValues = stackValues.slice(0, -1) // Remove the trailing comma
+
+    return stackValues
   }
 
-  // push item to end of list
-  push(input) {
-    self.strstack.push(input)
+  push(pushedString: string): void {
+    // push the value onto the stack
+    this.stackAsList.push(pushedString)
   }
 
   // pop item from end of list and return value
-  pop() {
-    let removed = ""
-    if (self.strstack[0]) {
-      removed = self.strstack[self.strstack.length - 1]
+  pop(): string {
+    // return top of the stack
+    let returnValue: string = ""
+
+    if (this.stackAsList.length > 0) {
+      const topItem: string = this.stackAsList.pop()!
+      returnValue = topItem
     } else {
-      removed = "nothing to remove"
+      returnValue = "The stack is empty!"
     }
-    self.strstack.splice(-1)
-    return removed
+
+    return returnValue
   }
 }
 
