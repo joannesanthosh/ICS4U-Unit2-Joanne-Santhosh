@@ -7,7 +7,6 @@
 import MrCoxallStack from './mrCoxallStack.ts'
 
 // this function uses the MrCoxallStack
-
 const cityStack = new MrCoxallStack()
 console.log("The size of the stack is: " + cityStack.size)
 console.log("Is the stack empty?: " + cityStack.isEmpty)
