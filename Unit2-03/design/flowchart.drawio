@@ -158,7 +158,7 @@
                         <mxPoint y="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="70" value="&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;font style=&quot;&quot; color=&quot;#ffffff&quot;&gt;if (this.stackAsList.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;font style=&quot;&quot; color=&quot;#ffffff&quot;&gt;length&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;font style=&quot;&quot; color=&quot;#ffffff&quot;&gt;&amp;gt; 0)&lt;/font&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="70" value="&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;font color=&quot;#050505&quot;&gt;if (this.stackAsList.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;font color=&quot;#050505&quot;&gt;length&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;font color=&quot;#050505&quot;&gt;&amp;gt; 0)&lt;/font&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
                     <mxGeometry x="-70" y="290" width="100" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="78" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#050505;fontFamily=Helvetica;fontColor=#050505;" edge="1" parent="1" source="72" target="26">
