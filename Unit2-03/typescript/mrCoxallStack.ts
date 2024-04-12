@@ -14,12 +14,16 @@ class MrCoxallStack {
   }
 
   // checks if stack is empty
-  get isEmpty() {
-    return this.stackAsList.length == 0
+  get isEmpty(): boolean {
+      if (this.stackAsList.length > 0) {
+          return false
+      } else {
+          return true
+      }
   }
 
   // returns stack size
-  get size() {
+  get size(): number {
       return this.stackAsList.length
   }
 
