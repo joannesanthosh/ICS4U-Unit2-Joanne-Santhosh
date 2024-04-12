@@ -13,6 +13,32 @@ class MrCoxallStack {
     this.stackAsList = []
   }
 
+  // checks if stack is empty
+  get isEmpty(): boolean {
+      if (this.stackAsList.length > 0) {
+          return false
+      } else {
+          return true
+      }
+  }
+
+  // returns stack size
+  get size(): number {
+      return this.stackAsList.length
+  }
+
+  showStack(): string {
+    // return the stack
+    let stackValues: string = ""
+
+    for (const value of this.stackAsList) {
+stackValues += value + ","
+    }
+    stackValues = stackValues.slice(0, -1) // Remove the trailing comma
+
+    return stackValues
+  }
+
   push(pushedString: string): void {
     // push the value onto the stack
     this.stackAsList.push(pushedString)
@@ -30,34 +56,8 @@ class MrCoxallStack {
       returnValue = "The stack is empty!"
     }
 
-  // checks if stack is empty
-  get isEmpty(): boolean {
-    if (this.stackAsList.length > 0) {
-        return false
-    } else {
-        return true
-    }
-  }
-
-  // returns stack size
-  get size(): number {
-    return this.stackAsList.length
-  }
-
     return returnValue
   }
-}
-
-  showStack(): string {
-  // return the stack
-  let stackValues: string = ""
-
-  for (const value of this.stackAsList) {
-stackValues += value + ","
-  }
-  stackValues = stackValues.slice(0, -1) // Remove the trailing comma
-
-  return stackValues
 }
 
 // Export the class
