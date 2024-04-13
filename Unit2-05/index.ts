@@ -1,5 +1,5 @@
 /*
- * This program outputs stuff
+ * This program is the index code
  * @author  Joanne Santhosh 
  * @version 1.0 
  * @since   2024-02-26
